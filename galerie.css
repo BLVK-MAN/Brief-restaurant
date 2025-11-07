@@ -1,0 +1,46 @@
+.backgroundMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.3;
+}
+.GalleryTitle{
+     font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin: 0 0 3rem 0;
+  font-size: 60px;
+  padding-top: 2rem;
+  color: #00ffb399;
+  letter-spacing: 2px;
+}
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 0 20px;
+  margin-bottom: 60px;
+  animation: fadeInDown 1s ease-out;
+}
+
+.menu-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  animation: fadeIn 1s ease-out backwards;
+}
+.menu-item img:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+}
+@media (max-width: 1200px) {
+  .menu-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
