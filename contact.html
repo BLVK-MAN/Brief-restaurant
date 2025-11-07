@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="home.css">
   <link rel="stylesheet" href="contact.css">
   <script src="footerheader.js" defer></script>
+  <script src="contact.js" defer></script>
   <title>Contact Us</title>
 </head>
 
@@ -13,25 +14,46 @@
   <div id="header-home"></div>
   <img src="Pics/dark-grunge-texture.jpg" class="backgroundMenu">
 <h1 class="ContactTitle">Contact Us</h1>
-<div class="contact-container">
-    <form class="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+ <div class="contact-container">
+      <div class="contact-form">
+        <div class="success-message" id="successMessage">
+          Your message has been sent successfully!
+        </div>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
+            <div class="error-message" id="nameError">Please enter your name (at least 2 characters)</div>
+          </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+            <div class="error-message" id="emailError">Please enter a valid email address</div>
+          </div>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+            <div class="error-message" id="messageError">Please enter a message (at least 10 characters)</div>
+          </div>
 
-        <button type="submit">Send Message</button>
-    </form>
-
-    <div class="contact-info">
-        <h2>Our Contact Information</h2>
-        <p><strong>Address:</strong> 123 Foodie Lane, Flavor Town, FT 45678</p>
-        <p><strong>Phone:</strong> (123) 456-7890</p>
-        <p><strong>Email:</strong>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+      <div class="right-section">
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.5081925449086!2d-7.632136!3d33.589886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7cd4778aa113b%3A0xb06c1d84f310fd3!2sCasablanca%2C%20Morocco!5e0!3m2!1sen!2sus!4v1234567890"
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="FreshBite Location">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <div id="footer-home"></div>
 </body>
